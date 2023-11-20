@@ -78,7 +78,7 @@ ul li::before {
     width: 28px;
     border-radius: 50%;
     /* some reason this is not showing and getting 404 message */
-    background-image: url(images/unchecked.png); 
+    /* background-image: url(/Users/fabiolagarcon/Desktop/portfolioprojects/To-Do-List/images/download-2.png);  */
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -91,9 +91,9 @@ ul li.checked{
 }
 
 /* for some reason it is not showing up on the page */
-ul li.checked::after {
-     background-image: url(images/checked.png);
-}
+/* ul li.checked::after {
+     background-image: url(/Users/fabiolagarcon/Desktop/portfolioprojects/To-Do-List/images/download-1.png);
+} */
 
 ul li span{
     position: absolute;
@@ -112,3 +112,5 @@ ul li span{
 ul li span:hover {
     background: #edeef0;
 }
+
+

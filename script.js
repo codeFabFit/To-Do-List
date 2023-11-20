@@ -14,14 +14,31 @@ function addTask(){
 // making sure you add task and it will be added to the list 
     }
     inputBox.value="";
+    saveData();
 }
 
 // making sure it is going to work effectively and it will become checked 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked")
+        saveData();
     } 
     else if(e.target.tagName == "SPAN") {
-        e.target.parentElement.remove()
+        e.target.parentElement.remove();
+        saveData();
     }
 }, false);
+
+
+// saves the data in the browser if you refresh or exit
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML)
+}
+
+// saved data for when you come back again
+
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data")
+}
+// calls the function
+showTask();
